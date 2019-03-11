@@ -1,0 +1,13 @@
+*development environment
+Windows7, Visual Studio 2013, OpenCV3.0.0, Tesseract, win32 console application
+
+*environment variable setting
+name : TESSDATA_PREFIX
+value : C:\Tesseract-Build\tesseract-ocr
+
+name : Path
+valye : C:\opencv\build\x86\vc12\bin;(add it)
+
+*move "Tesseract-Build" folder to C:\
+
+*http://vorba.ch/2014/tesseract-3.03-vs2013.html(how to use tesseract in vs2013) 

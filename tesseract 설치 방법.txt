@@ -1,0 +1,7 @@
+1. git을 이용하여 dependency 설치
+2. Tesseract 빌드하기
+-Tesseract-Build\ 로 이동합니다. (명령 프롬프트에 cd..을 입력 또는 cd \Tesseract-Build\ 입력)
+-명령 프롬프트에 svn checkout http://tesseract-ocr.googlecode.com/svn/trunk/ tesseract-ocr 을 입력하여 빌드 파일 받기
+
+
+http://vorba.ch/2014/tesseract-3.03-vs2013.html 참고
