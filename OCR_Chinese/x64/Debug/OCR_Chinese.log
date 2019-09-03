@@ -1,0 +1,13 @@
+﻿Build started 2016-02-01 오후 5:43:42.
+     1>Project "C:\Users\park min seok\Documents\Visual Studio 2013\Projects\OCR_Chinese\OCR_Chinese\OCR_Chinese.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\park min seok\Documents\Visual Studio 2013\Projects\OCR_Chinese\x64\Debug\OCR_Chinese.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Tesseract-Build\lib\Win32" libtesseract304.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\park min seok\Documents\Visual Studio 2013\Projects\OCR_Chinese\x64\Debug\OCR_Chinese.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\park min seok\Documents\Visual Studio 2013\Projects\OCR_Chinese\x64\Debug\OCR_Chinese.lib" /MACHINE:X64 x64\Debug\OCR_Chinese.res
+         x64\Debug\Source.obj
+     1>Source.obj : error LNK2019: unresolved external symbol "public: __cdecl tesseract::TessBaseAPI::TessBaseAPI(void)" (??0TessBaseAPI@tesseract@@QEAA@XZ) referenced in function main
+     1>Source.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl tesseract::TessBaseAPI::~TessBaseAPI(void)" (??1TessBaseAPI@tesseract@@UEAA@XZ) referenced in function main
+     1>C:\Users\park min seok\Documents\Visual Studio 2013\Projects\OCR_Chinese\x64\Debug\OCR_Chinese.exe : fatal error LNK1120: 2 unresolved externals
+     1>Done Building Project "C:\Users\park min seok\Documents\Visual Studio 2013\Projects\OCR_Chinese\OCR_Chinese\OCR_Chinese.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.55
