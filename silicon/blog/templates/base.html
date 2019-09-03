@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>
+	{% block head_title %} TODO {% endblock head_title %} 
+	</title>
+{% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<div class='container'>
+<h1 align="center">ToDo List</h1>
+{% block my-content %}
+{% endblock my-content %}
+</div>
+</body>
+</html>

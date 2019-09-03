@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block head_title %}Show Lists || {{block.super}} {% endblock head_title %} 
+{% block extra_head %}
+<style>
+#todos {
+	margin: 20px;
+	border: 1px solid #CCCCCC;
+	width: 100%;
+}
+#todos:hover {
+	border: 1px solid #777;
+}
+
+#content {
+	white-space: normal;
+	line-height: 1.2;
+	height: 2.4em;/*show 2 lines else ...*/
+	text-align: center;
+	word-wrap: break-word;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow:hidden;
+    text-overflow:ellipsis;
+}
+</style>
+
+{% endblock %}
+
+{% block my-content %}
+
+<div align="center">
+	<a href='/create/' align="center"> 
+	<button type="button"">Add ToDo</button>
+	</a>
+</div>
+
+
+<div class="todo_list" align = "center">
+	{% for todo in todolist %}
+	
+	<div id='todos'>
+		<h3> Title : {{ todo.title }} </h3>
+		<p id='content' align="center">Content : {{ todo.content }}</p>
+		<script type="text/javascript">
+			var now = new Date();
+			var todo_deadline = new Date({{todo.deadline.year}}, {{todo.deadline.month}}-1, {{todo.deadline.day}});
+
+			var gap = todo_deadline.getTime() - now.getTime(); 
+			
+			if(gap < 0)
+			{
+				document.write("<FONT COLOR='red'>Over Deadline</FONT>");
+			}	
+		</script>
+		<p><small>Dead Line : {{ todo.deadline.year }}-{{ todo.deadline.month }}-{{ todo.deadline.day }}</small></p>
+		
+		<button type="button" onclick="location.href='/edit/{{todo.pk}}'">Edit</button>
+		<button type="button" onclick="location.href='/delete/{{todo.pk}}'">Delete</button>
+	
+	</div>
+	{% endfor %}
+</div>
+
+
+{% endblock my-content %}

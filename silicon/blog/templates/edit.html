@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block head_title %}EDIT || {{block.super}} {% endblock head_title %} 
+
+{% block extra_head %}
+<script type="text/javascript">
+function checkForm() {
+        form = document.edit;
+        if (form.title.value == '') {
+            alert("Please write the title");
+            form.title.focus();
+            return;
+        }
+        if (form.content.value =='') {
+            alert("Please write the content");
+            form.content.focus();
+            return;
+        }
+        else{
+          form.submit();
+        }
+    }
+</script>
+{% endblock %}
+{% block my-content %}
+
+
+<form method='POST' name="edit" enctype="multipart/form-data"> {% csrf_token %}
+	<table align="center">
+  <tr>
+    <td><h1>Title </h1></td>
+    <td><input type='text' name='title' value={{todo.title}}></td>
+  </tr>
+  <tr>
+    <td><h3>Content</h3></td>
+    <td><textarea name='content' cols="40" rows="5" >{{todo.content}}</textarea></td>
+  </tr>
+
+  <tr>
+    <td>
+    <input type="button" value="Edit TODO" onclick="checkForm()">
+    <a href='/'>Cancel</a>
+    </td>
+  </tr>
+  </table>
+
+{% endblock my-content %}
